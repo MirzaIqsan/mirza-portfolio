@@ -1,12 +1,91 @@
+/* Full-screen background */
 body {
     background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
     color: white;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Navbar Style */
 .navbar {
-    background-color: #1a2a6c;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(26, 42, 108, 0.8);  /* Transparent background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);  /* Subtle shadow for depth */
+    transition: background 0.3s ease;
+    padding: 10px 20px;
 }
 
+/* Navbar brand */
+.navbar .navbar-brand {
+    color: #fff !important;  /* Ensures brand name is visible */
+    font-weight: 600;
+}
+
+/* Navbar links */
+.navbar .nav-link {
+    color: #fff !important;  /* White links */
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #00bcd4 !important;  /* Hover color */
+}
+
+/* Navbar active state */
+.navbar .nav-item.active .nav-link {
+    color: #00bcd4 !important;  /* Active link color */
+}
+
+/* Mobile Menu */
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-color: #fff;
+}
+
+/* Centering the navbar links */
+.navbar-collapse {
+    display: flex;
+    justify-content: left;  /* Center the navbar items horizontally */
+    width: 100%;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;  /* Ensure the items are centered */
+}
+
+.navbar-nav .nav-item {
+    display: inline-block;  /* Ensure the items are aligned horizontally */
+}
+
+/* On scroll, change navbar background color */
+.navbar-scrolled {
+    background-color: rgba(26, 42, 108, 0.9);  /* Slightly darker on scroll */
+}
+
+
+/* Adjust main content */
+.container {
+    margin-top: 70px; /* To prevent overlap with fixed navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+}
+
+/* Navbar link customization */
 .navbar .nav-link {
     color: white !important;
 }
@@ -15,12 +94,56 @@ body {
     color: #fdbb2d !important;
 }
 
-h2.blue-text, h3.blue-text {
+h2.blue-text, h3.blue-text, h1.blue-text {
     color: #00bcd4;
 }
 
+/* Style for cards */
 .card {
     border: none;
     background-color: #20232a;
     color: white;
+}
+
+
+/* Custom accordion button styles */
+.accordion-button {
+    background-color: #1a2a6c;  /* Dark background color */
+    color: white;  /* Text color */
+    border: none;  /* Remove the border */
+    border-radius: 8px 8px 0 0;  /* Rounded top corners */
+}
+
+.accordion-button:hover {
+    background-color: #003366;  /* Lighter shade on hover */
+}
+
+.accordion-button:focus {
+    box-shadow: none;  /* Remove focus shadow */
+}
+
+/* Custom active accordion button style (when expanded) */
+.accordion-button:not(.collapsed) {
+    background-color: #003366;  /* Lightened background for active state */
+    color: white;  /* White text */
+}
+
+
+
+/* Optional: Add subtle shadow for better separation */
+.accordion-item {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;  /* Space between items */
+}
+
+/* Style the accordion headers (titles) */
+.accordion-header {
+    background-color: #1a2a6c;
+    color: white;
+    border-radius: 8px 8px 0 0;
+}
+
+.accordion-header h4 {
+    margin: 0;
+    font-weight: bold;
 }

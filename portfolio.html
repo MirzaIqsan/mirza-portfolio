@@ -6,6 +6,31 @@
     <title>Portfolio - Mirza's Portfolio</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .card-header {
+            background-color: #1a2a6c;
+            color: white;
+        }
+        .card-header h4 {
+            margin: 0;
+        }
+        .card-body {
+            background-color: #f7f7f7;
+        }
+        .blue-text {
+            color: #00bcd4;
+        }
+        .portfolio-item {
+            margin-bottom: 30px;
+        }
+        .img-fluid {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -27,41 +52,53 @@
             </div>
         </nav>
     </header>
+
     <div class="container mt-5">
-        <h2 class="blue-text">Portfolio</h2>
+        <h2 class="blue-text text-center">Portfolio</h2>
+        
         <div class="accordion" id="portfolioAccordion">
-            <div class="card">
-                <div class="card-header" id="designHeader">
-                    <h2>
-                        <button class="btn btn-link blue-text" type="button" data-toggle="collapse" data-target="#designContent">
-                            Design Projects
-                        </button>
-                    </h2>
-                </div>
-                <div id="designContent" class="collapse show">
-                    <div class="card-body">
-                        <img src="Namecard.png" alt="Namecard" class="img-fluid">
-                        <p>Description of the namecard design...</p>
+            <!-- Design Projects Accordion -->
+            <div class="accordion-item portfolio-item">
+                <h2 class="accordion-header" id="designHeader">
+                    <button class="accordion-button blue-text" type="button" data-toggle="collapse" data-target="#designContent" aria-expanded="true" aria-controls="designContent">
+                        Design Projects
+                    </button>
+                </h2>
+                <div id="designContent" class="accordion-collapse collapse show" aria-labelledby="designHeader" data-bs-parent="#portfolioAccordion">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="Namecard.png" alt="Namecard" class="img-fluid">
+                                <p class="mt-3">This is a namecard design that represents my professional identity, showcasing my attention to detail and creativity.</p>
+                            </div>
+                            <!-- Additional design project image can go here -->
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-header" id="devHeader">
-                    <h2>
-                        <button class="btn btn-link blue-text" type="button" data-toggle="collapse" data-target="#devContent">
-                            Development Projects
-                        </button>
-                    </h2>
-                </div>
-                <div id="devContent" class="collapse">
-                    <div class="card-body">
-                        <img src="Escaperoom.png" alt="EscapeRoom" class="img-fluid">
-                        <p>Description of the VR escape room...</p>
+
+            <!-- Development Projects Accordion -->
+            <div class="accordion-item portfolio-item">
+                <h2 class="accordion-header" id="devHeader">
+                    <button class="accordion-button blue-text" type="button" data-toggle="collapse" data-target="#devContent" aria-expanded="false" aria-controls="devContent">
+                        Development Projects
+                    </button>
+                </h2>
+                <div id="devContent" class="accordion-collapse collapse" aria-labelledby="devHeader" data-bs-parent="#portfolioAccordion">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="Escaperoom.png" alt="EscapeRoom" class="img-fluid">
+                                <p class="mt-3">A VR escape room project that combines creativity and problem-solving, providing an immersive experience.</p>
+                            </div>
+                            <!-- Additional development project image can go here -->
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
