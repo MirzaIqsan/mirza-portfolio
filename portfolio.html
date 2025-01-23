@@ -26,9 +26,20 @@
         .img-fluid {
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer; /* Makes the image look clickable */
+            max-width: 100%;  /* Ensure it doesn't stretch beyond container width */
+            height: auto;     /* Maintain aspect ratio */
         }
         .accordion-button:focus {
             box-shadow: none;
+        }
+        .col-md-6 {
+            padding: 0; /* Remove padding from columns */
+        }
+        .login-image {
+            max-width: 100%;
+            max-height: 400px; /* Limit the height */
+            object-fit: contain; /* Keep the aspect ratio intact */
         }
     </style>
 </head>
@@ -64,14 +75,17 @@
                         Design Projects
                     </button>
                 </h2>
-                <div id="designContent" class="accordion-collapse collapse show" aria-labelledby="designHeader" data-bs-parent="#portfolioAccordion">
+                <div id="designContent" class="accordion-collapse collapse " aria-labelledby="designHeader" data-bs-parent="#portfolioAccordion">
                     <div class="accordion-body">
                         <div class="row">
                             <div class="col-md-6">
                                 <img src="Namecard.png" alt="Namecard" class="img-fluid">
                                 <p class="mt-3">This is a namecard design that represents my professional identity, showcasing my attention to detail and creativity.</p>
                             </div>
-                            <!-- Additional design project image can go here -->
+                            <div class="col-md-6">
+                                <img src="Namecard.png" alt="Namecard" class="img-fluid">
+                                <p class="mt-3">This is a namecard design that represents my professional identity, showcasing my attention to detail and creativity.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -88,10 +102,17 @@
                     <div class="accordion-body">
                         <div class="row">
                             <div class="col-md-6">
-                                <img src="Escaperoom.png" alt="EscapeRoom" class="img-fluid">
-                                <p class="mt-3">A VR escape room project that combines creativity and problem-solving, providing an immersive experience.</p>
+                                <!-- Escape Room Image with Modal Trigger -->
+                                <img src="Escaperoom.png" alt="EscapeRoom" class="img-fluid" data-toggle="modal" data-target="#videoModal">
+                                <p class="mt-3">This is a VR escape room project that combines creativity and problem-solving to provide an immersive experience. It was developed as the final project in my Immersive Technologies module, utilizing Unity 3D. The project was tested with VR headsets to ensure a fully interactive and engaging environment.</p>
                             </div>
-                            <!-- Additional development project image can go here -->
+                            <div class="col-md-6">
+                                <!-- Login Image with Modal Trigger -->
+                                <img src="loginpage.png" alt="loginpage" class="img-fluid login-image" data-toggle="modal" data-target="#loginModal">
+                                <p class="text-center mt-2 blue-text"><strong>Video Demonstration</strong></p>
+                                <p class="mt-3">This is a login page created in React Native, designed for seamless user authentication. The app connects to a JSON database hosted on JSONHost, where user credentials are stored and updated. Upon entering the correct login details, the app updates the database, ensuring that user information is accurately saved. This project demonstrates my skills in mobile app development and backend integration, offering a user-friendly and functional login experience.</p>
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -99,6 +120,47 @@
         </div>
     </div>
 
+    <!-- Modal for Escape Room Video -->
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="videoModalLabel">Escape Room VR Project</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <video width="100%" controls>
+                        <source src="EscapeRoom.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Login Page Video -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login Page Demo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <video width="100%" controls>
+                        <source src="loginpage.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
