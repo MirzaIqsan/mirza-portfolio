@@ -29,13 +29,76 @@
     </header>
     
     <div class="container">
+        <!-- About Me Section -->
         <h2 class="blue-text">About Me</h2>
-        <p>Hello! I'm Mirza, a passionate web developer and designer with a love for creating seamless, user-friendly experiences. My journey into technology started with a curiosity for how websites and apps work, and today, I focus on front-end development using HTML, CSS, JavaScript, and React. I also design interfaces with an eye for detail and functionality, ensuring every project I work on is both visually appealing and easy to use.</p>
+        <div id="aboutMeAccordion">
+            <div class="card">
+                <div class="card-header" id="aboutMeHeading">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#aboutMeCollapse" aria-expanded="true" aria-controls="aboutMeCollapse">
+                             Click to Show Details
+                        </button>
+                    </h5>
+                </div>
 
-        <p>When I'm not coding or designing, I enjoy my time as a homebody. I love staying in, playing video games, and watching UFC fights during the weekend. It’s my way of unwinding and recharging for the week ahead.</p>
+                <div id="aboutMeCollapse" class="collapse show" aria-labelledby="aboutMeHeading" data-parent="#aboutMeAccordion">
+                    <div class="card-body">
+                        Hello! I'm Mirza, a passionate web developer and designer with a love for creating seamless, user-friendly experiences. My journey into technology started with a curiosity for how websites and apps work, and today, I focus on front-end development using HTML, CSS, JavaScript, and React. I also design interfaces with an eye for detail and functionality, ensuring every project I work on is both visually appealing and easy to use.
+
+                        When I'm not coding or designing, I enjoy my time as a homebody. I love staying in, playing video games, and watching UFC fights during the weekend. It’s my way of unwinding and recharging for the week ahead.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills & Technologies Section -->
+        <h3 class="blue-text">Skills & Technologies</h3>
+        <div id="skillsAccordion">
+            <div class="card">
+                <div class="card-header" id="skillsHeading">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#skillsCollapse" aria-expanded="true" aria-controls="skillsCollapse">
+                             Click to Show Details
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="skillsCollapse" class="collapse" aria-labelledby="skillsHeading" data-parent="#skillsAccordion">
+                    <div class="card-body">
+                        <ul>
+                            <li>HTML, CSS, JavaScript</li>
+                            <li>React, React Native</li>
+                            <li>UI/UX Design</li>
+                            <li>Figma, Adobe XD</li>
+                            <li>Version Control (Git, GitHub)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <h3 class="blue-text">Education</h3>
+        <div id="educationAccordion">
+            <div class="card">
+                <div class="card-header" id="educationHeading">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#educationCollapse" aria-expanded="true" aria-controls="educationCollapse">
+                             Click to Show Details
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="educationCollapse" class="collapse" aria-labelledby="educationHeading" data-parent="#educationAccordion">
+                    <div class="card-body">
+                        I studied at Yishun Secondary School from 2016 to 2019. I have a diploma in Nitec in Infocomm Tech, which I completed from 2020 to 2022. Additionally, I earned a Higher Nitec diploma in Cybersecurity after gaining direct entry to the second year of the program, completing it in one year.
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
-    
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

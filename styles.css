@@ -125,3 +125,87 @@ h1.blue-text, h2.blue-text, h3.blue-text {
 .container p {
     margin-bottom: 30px;
 }
+/* Accordion Card styling */
+.card {
+    margin-bottom: 15px;
+    background-color: rgba(26, 42, 108, 0.9);
+    border: none;
+    border-radius: 8px;
+}
+
+.card-header {
+    background-color: rgba(26, 42, 108, 0.8);
+    color: #fff;
+}
+
+.card-body {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+/* Change accordion button color */
+.accordion-button.custom-button {
+    background-color:  rgba(26, 42, 108, 0.9); /* Blue color for button */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 15px; 
+}
+
+
+.accordion-button.custom-button:focus {
+    box-shadow: none; /* Remove focus outline */
+}
+
+/* Custom modal styles */
+.modal-content {
+    border-radius: 15px; /* Rounded corners for the modal */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for better pop-up effect */
+    background-color: #f7f7f7; /* Soft background color */
+    transition: transform 0.3s ease-in-out; /* Smooth scaling effect when opening */
+}
+
+.modal-header {
+    background-color: #1a2a6c; /* Blue header background */
+    color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.modal-title {
+    font-size: 1.25rem; /* Make the title slightly larger */
+}
+
+.close {
+    font-size: 2rem;
+    color: white;
+    opacity: 0.8;
+}
+
+.close:hover, .close:focus {
+    opacity: 1; /* Make the close button more visible on hover */
+}
+
+.modal-body {
+    padding: 20px; /* Add some padding inside the modal body */
+    text-align: center;
+}
+
+.modal-body video {
+    max-width: 100%;
+    border-radius: 10px; /* Rounded corners for the video */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to the video */
+}
+
+/* Modal animation */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.modal-dialog {
+    animation: fadeInUp 0.3s ease-in-out; /* Add fade-in-up animation to modal */
+}
+
+
+
+
