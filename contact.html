@@ -6,7 +6,6 @@
     <title>Contact - Mirza's Portfolio</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 <body>
     <header>
@@ -36,59 +35,10 @@
             <li>LinkedIn: <a href="https://www.linkedin.com/in/mirza-iqsan" target="_blank">Mirza Iqsan</a></li>
             <li>Whatsapp: +65 81384536</li>
         </ul>
-        
-        <h3>Or send me a message:</h3>
-        <form id="contact-form">
-            <div class="form-group">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" class="form-control" placeholder="Your Name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Your Email</label>
-                <input type="email" id="email" class="form-control" placeholder="Your Email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" class="form-control" placeholder="Your Message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
-        
-        <div id="response-message" class="mt-3" style="display: none;"></div>
     </div>
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <script type="text/javascript">
-        // Initialize EmailJS
-        emailjs.init('wElquTc-KCPs7nbgb');  // Replace with your user ID
-
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();  // Prevent form from submitting the default way
-
-            var name = document.getElementById('name').value;
-            var email = document.getElementById('email').value;
-            var message = document.getElementById('message').value;
-
-            // Send email using EmailJS
-            emailjs.send('service_rtewch3', 'template_9t0w8iq', {
-                from_name: name,         // Corresponds to {{from_name}} in the template
-                reply_to: email,         // Corresponds to {{reply_to}} in the template
-                message: message         // Corresponds to {{message}} in the template
-            })
-            .then(function(response) {
-                document.getElementById('response-message').style.display = 'block';
-                document.getElementById('response-message').innerHTML = 'Your message has been sent successfully!';
-                document.getElementById('response-message').style.color = 'green';
-            })
-            .catch(function(error) {
-                document.getElementById('response-message').style.display = 'block';
-                document.getElementById('response-message').innerHTML = 'Sorry, something went wrong. Please try again later.';
-                document.getElementById('response-message').style.color = 'red';
-            });
-        });
-    </script>
 </body>
 </html>
