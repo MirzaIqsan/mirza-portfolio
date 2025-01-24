@@ -14,69 +14,59 @@ body {
     top: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(26, 42, 108, 0.8);  /* Transparent background */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);  /* Subtle shadow for depth */
+    background: rgba(26, 42, 108, 0.8);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: background 0.3s ease;
     padding: 10px 20px;
 }
 
 /* Navbar brand */
 .navbar .navbar-brand {
-    color: #fff !important;  /* Ensures brand name is visible */
+    color: #fff !important;
     font-weight: 600;
 }
 
 /* Navbar links */
 .navbar .nav-link {
-    color: #fff !important;  /* White links */
+    color: #fff !important;
     font-size: 16px;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .navbar .nav-link:hover {
-    color: #00bcd4 !important;  /* Hover color */
+    color: #00bcd4 !important;
 }
 
 /* Navbar active state */
 .navbar .nav-item.active .nav-link {
-    color: #00bcd4 !important;  /* Active link color */
-}
-
-/* Mobile Menu */
-.navbar-toggler {
-    border: none;
-}
-
-.navbar-toggler-icon {
-    background-color: #fff;
+    color: #00bcd4 !important;
 }
 
 /* Centering the navbar links */
 .navbar-collapse {
     display: flex;
-    justify-content: left;  /* Center the navbar items horizontally */
+    justify-content: left;
     width: 100%;
 }
 
 .navbar-nav {
     display: flex;
-    justify-content: center;  /* Ensure the items are centered */
+    justify-content: center;
 }
 
 .navbar-nav .nav-item {
-    display: inline-block;  /* Ensure the items are aligned horizontally */
+    display: inline-block;
 }
 
 /* On scroll, change navbar background color */
 .navbar-scrolled {
-    background-color: rgba(26, 42, 108, 0.9);  /* Slightly darker on scroll */
+    background-color: rgba(26, 42, 108, 0.9);
 }
-
 
 /* Adjust main content */
 .container {
-    margin-top: 70px; /* To prevent overlap with fixed navbar */
+    margin-top: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,69 +75,53 @@ body {
     height: 100%;
 }
 
-/* Navbar link customization */
-.navbar .nav-link {
-    color: white !important;
-}
-
-.navbar .nav-link:hover {
-    color: #fdbb2d !important;
-}
-
-h2.blue-text, h3.blue-text, h1.blue-text {
+/* Text styles */
+h1.blue-text, h2.blue-text, h3.blue-text {
     color: #00bcd4;
 }
 
-/* Style for cards */
-.card {
-    border: none;
-    background-color: #20232a;
-    color: white;
+/* Adjust carousel size */
+.carousel-inner {
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 50%; /* Limit the width of the carousel */
+    max-height: 400px; /* Limit the height */
+    margin: 0 auto; /* Center the carousel */
 }
 
-
-/* Custom accordion button styles */
-.accordion-button {
-    background-color: #1a2a6c;  /* Dark background color */
-    color: white;  /* Text color */
-    border: none;  /* Remove the border */
-    border-radius: 8px 8px 0 0;  /* Rounded top corners */
+/* Carousel images styling */
+.carousel-item {
+    transition: transform 0.5s ease;
 }
 
-.accordion-button:hover {
-    background-color: #003366;  /* Lighter shade on hover */
+/* Ensure images fill the carousel area while maintaining aspect ratio */
+.carousel-image {
+    width: 100%;  /* Ensure images fill the width */
+    height: 100%;  /* Make the image take full height of the container */
+    object-fit: cover;  /* Prevent stretching and keep aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.accordion-button:focus {
-    box-shadow: none;  /* Remove focus shadow */
+/* Carousel control buttons */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #00bcd4;
 }
 
-/* Custom active accordion button style (when expanded) */
-.accordion-button:not(.collapsed) {
-    background-color: #003366;  /* Lightened background for active state */
-    color: white;  /* White text */
+/* Button to view portfolio */
+.btn-primary {
+    background-color: #00bcd4;
+    border-color: #00bcd4;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
 }
 
-
-
-/* Optional: Add subtle shadow for better separation */
-.accordion-item {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;  /* Space between items */
+.btn-primary:hover {
+    background-color: #fdbb2d;
+    border-color: #fdbb2d;
 }
 
-/* Style the accordion headers (titles) */
-.accordion-header {
-    background-color: #1a2a6c;
-    color: white;
-    border-radius: 8px 8px 0 0;
-}
-
-.accordion-header h4 {
-    margin: 0;
-    font-weight: bold;
-}
-
-.accordion-body {
-    transition: max-height 0.3s ease-out; /* Smooth transition on collapse/expand */
+/* Add some padding and margin for a cleaner layout */
+.container p {
+    margin-bottom: 30px;
 }
